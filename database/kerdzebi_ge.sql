@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2022 at 04:16 PM
+-- Generation Time: Feb 06, 2022 at 02:03 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.24
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bwp.kerdzebi.ge`
+-- Database: `kerdzebi.ge`
 --
 
 -- --------------------------------------------------------
@@ -42,11 +42,13 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `parent_id`, `image`, `rank`, `status`, `created_at`, `updated_at`) VALUES
-(48, 52, '20220129005848.png', 1, 1, '2022-01-28 20:58:48', '2022-01-29 08:38:27'),
-(49, 52, '20220129005931.png', 3, 1, '2022-01-28 20:59:31', '2022-01-29 08:38:39'),
+(48, 52, '20220129005848.png', 1, 1, '2022-01-28 20:58:48', '2022-02-03 07:12:01'),
+(49, 52, '20220129005931.png', 3, 1, '2022-01-28 20:59:31', '2022-02-03 07:56:05'),
 (50, 52, '20220129010015.png', 2, 1, '2022-01-28 21:00:15', '2022-01-29 08:38:47'),
 (51, 52, '20220129010519.png', 4, 1, '2022-01-28 21:05:19', '2022-01-29 08:40:22'),
-(52, NULL, NULL, 1, 1, '2022-01-29 07:54:42', '2022-01-29 08:44:38');
+(52, NULL, NULL, 10, 1, '2022-01-29 07:54:42', '2022-02-03 07:11:40'),
+(61, NULL, NULL, 20, 1, '2022-02-03 07:52:13', '2022-02-03 07:53:12'),
+(62, 61, NULL, NULL, 0, '2022-02-03 07:52:24', '2022-02-03 07:53:29');
 
 -- --------------------------------------------------------
 
@@ -83,7 +85,13 @@ INSERT INTO `category_translations` (`id`, `category_id`, `locale`, `name`, `des
 (147, 51, 'zh-CN', '意大利面', NULL, '2022-01-28 21:05:19', '2022-01-28 21:05:19'),
 (148, 52, 'en', 'Food', NULL, '2022-01-29 07:54:42', '2022-01-29 07:54:42'),
 (149, 52, 'ka', 'საკვები', NULL, '2022-01-29 07:54:42', '2022-01-29 07:54:42'),
-(150, 52, 'zh-CN', '食物', NULL, '2022-01-29 07:54:42', '2022-01-29 07:54:42');
+(150, 52, 'zh-CN', '食物', NULL, '2022-01-29 07:54:42', '2022-01-29 07:54:42'),
+(175, 61, 'en', 'Dranks', 'Dranks', '2022-02-03 07:52:13', '2022-02-03 07:52:13'),
+(176, 61, 'ka', 'სასმელები', 'სასმელები', '2022-02-03 07:52:14', '2022-02-03 07:52:14'),
+(177, 61, 'zh-CN', 'Dranks-ZH-CN', 'Dranks-ZH-CN', '2022-02-03 07:52:14', '2022-02-03 07:52:14'),
+(178, 62, 'en', 'Plato Jacobson', 'Ipsam itaque sunt qu', '2022-02-03 07:52:24', '2022-02-03 07:52:24'),
+(179, 62, 'ka', 'Jenna Sanders', 'Repudiandae debitis', '2022-02-03 07:52:24', '2022-02-03 07:52:24'),
+(180, 62, 'zh-CN', 'Natalie Mcintosh', 'Nihil porro commodi', '2022-02-03 07:52:24', '2022-02-03 07:52:24');
 
 -- --------------------------------------------------------
 
@@ -222,7 +230,7 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `image`, `status`, `start_time`, `end_time`, `icon`, `link`, `images`, `created_at`, `updated_at`) VALUES
-(16, '20220130170150.png', 2, '2014-12-10 07:52:00', '2011-02-01 13:19:00', 'code', 'Sed facilis molestia', NULL, '2022-01-30 13:01:50', '2022-01-30 13:01:50');
+(17, NULL, 1, '2022-01-30 20:00:00', '2022-01-31 12:00:00', 'code-branch', 'https://api.kerdzebi.ge/api/v1/products', NULL, '2022-01-30 16:08:56', '2022-01-30 16:08:56');
 
 -- --------------------------------------------------------
 
@@ -245,9 +253,9 @@ CREATE TABLE `message_translations` (
 --
 
 INSERT INTO `message_translations` (`id`, `message_id`, `locale`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(46, 16, 'en', 'Sage Rodriguez', 'სასასა', '2022-01-30 13:01:50', '2022-01-30 13:01:50'),
-(47, 16, 'ka', 'Jennifer Sosa', 'სასასა', '2022-01-30 13:01:50', '2022-01-30 13:01:50'),
-(48, 16, 'zh-CN', 'Sybil Montgomery', 'სასასა', '2022-01-30 13:01:50', '2022-01-30 13:01:50');
+(49, 17, 'en', 'Product API', '<p>A complete output API will be added<br></p>', '2022-01-30 16:08:56', '2022-01-30 16:08:56'),
+(50, 17, 'ka', 'პროდუქციი API', '<p>დაემატება სრული პროდუქციი API<br></p>', '2022-01-30 16:08:56', '2022-01-30 16:08:56'),
+(51, 17, 'zh-CN', '产品 API', '<p>将添加完整的输出 API<br></p>', '2022-01-30 16:08:56', '2022-01-30 16:08:56');
 
 -- --------------------------------------------------------
 
@@ -289,7 +297,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (24, '2022_01_13_084600_create_message_translations_table', 6),
 (25, '2022_01_20_160345_create_settings_table', 7),
 (26, '2022_01_20_162023_create_setting_translations_table', 7),
-(27, '2022_01_21_171753_create_networks_table', 8);
+(27, '2022_01_21_171753_create_networks_table', 8),
+(28, '2019_12_14_000001_create_personal_access_tokens_table', 9),
+(29, '2022_02_03_135223_create_orders_table', 10);
 
 -- --------------------------------------------------------
 
@@ -322,7 +332,9 @@ CREATE TABLE `model_has_roles` (
 INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (1, 'App\\Models\\User', 1),
 (1, 'App\\Models\\User', 2),
-(2, 'App\\Models\\User', 3);
+(1, 'App\\Models\\User', 4),
+(2, 'App\\Models\\User', 3),
+(3, 'App\\Models\\User', 5);
 
 -- --------------------------------------------------------
 
@@ -347,6 +359,32 @@ CREATE TABLE `networks` (
 INSERT INTO `networks` (`id`, `icon`, `image`, `link`, `frame`, `created_at`, `updated_at`) VALUES
 (7, 'fab fa-facebook-f', NULL, 'https://www.facebook.com/kerdzebi.ge', NULL, '2022-01-21 15:51:12', '2022-01-21 15:51:12'),
 (9, 'fab fa-instagram', NULL, 'https://www.instagram.com/kerdzebi.ge/', NULL, '2022-01-22 03:24:57', '2022-01-22 03:24:57');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `table_id` int(11) DEFAULT NULL,
+  `place_id` int(11) DEFAULT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `table_id`, `place_id`, `product_id`, `quantity`, `status`, `created_at`, `updated_at`) VALUES
+(13, 5, NULL, NULL, 18, 5, NULL, NULL, '2022-02-03 19:21:52'),
+(14, 5, NULL, NULL, 19, 1, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -422,7 +460,7 @@ INSERT INTO `permissions` (`id`, `name`, `title`, `guard_name`, `created_at`, `u
 (17, 'contact-list', 'კონტაქტების ნახვა', 'web', '2021-12-26 04:47:05', '2022-01-11 15:30:07'),
 (18, 'contact-edit', 'კონტაქტის რედაქტირება', 'web', '2021-12-26 04:47:37', '2022-01-22 05:51:52'),
 (19, 'contact-create', 'კონტაქტის შექმნა', 'web', '2021-12-26 04:48:23', '2022-01-22 05:52:09'),
-(20, 'contact-delete', '', 'web', '2021-12-26 04:48:51', '2021-12-26 04:48:51'),
+(20, 'contact-delete', 'კონტაქტის წაშლა', 'web', '2021-12-26 04:48:51', '2022-01-31 19:52:58'),
 (21, 'client-list', 'კლიენტები', 'web', '2021-12-26 08:39:18', '2021-12-26 08:39:18'),
 (22, 'client-edit', 'კლიენტების რედაქტირება', 'web', '2021-12-26 08:40:34', '2021-12-26 08:40:34'),
 (23, 'client-delete', 'კლიენტის წაშლა', 'web', '2021-12-26 08:40:58', '2021-12-26 08:40:58'),
@@ -449,7 +487,41 @@ INSERT INTO `permissions` (`id`, `name`, `title`, `guard_name`, `created_at`, `u
 (45, 'reservation-list', 'რეზერვაციების სია', 'web', '2022-01-11 06:59:48', '2022-01-11 06:59:48'),
 (46, 'reservation-create', 'რეზერვაციის დამატება', 'web', '2022-01-11 07:00:26', '2022-01-11 07:00:26'),
 (47, 'reservation-edit', 'რეზერვაციის რედაქტირება', 'web', '2022-01-11 07:00:53', '2022-01-11 07:00:53'),
-(48, 'reservation-delete', 'რეზერვაციის წაშლა', 'web', '2022-01-11 07:01:09', '2022-01-11 07:01:09');
+(48, 'reservation-delete', 'რეზერვაციის წაშლა', 'web', '2022-01-11 07:01:09', '2022-01-11 07:01:09'),
+(51, 'token-list', 'ტოკენების სია', 'web', '2022-01-31 19:53:50', '2022-01-31 19:53:50'),
+(52, 'token-create', 'ტოკენის შექმნა', 'web', '2022-01-31 19:54:21', '2022-01-31 19:54:21'),
+(53, 'token-delete', 'ტოკენის წაშლა', 'web', '2022-01-31 19:54:38', '2022-01-31 19:54:38'),
+(54, 'order-list', 'შეკვეთების ცხრილი', 'web', '2022-02-03 13:07:37', '2022-02-03 13:07:37'),
+(55, 'order-create', 'შეკვეთის დამატება', 'web', '2022-02-03 13:08:16', '2022-02-03 13:08:16'),
+(56, 'order-edit', 'შეკვეთის რედაქტირება', 'web', '2022-02-03 13:08:38', '2022-02-03 13:09:00'),
+(57, 'order-delete', 'შეკვეთის წაშლა', 'web', '2022-02-03 13:09:15', '2022-02-03 13:09:15');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `personal_access_tokens`
+--
+
+CREATE TABLE `personal_access_tokens` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tokenable_id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_used_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `personal_access_tokens`
+--
+
+INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `created_at`, `updated_at`) VALUES
+(10, 'App\\Models\\User', 1, 'BWP', '463ab3eb8d2661a1888837e4e2dccd7ccef428e08cd985fb0559305766835b65', '[\"*\"]', '2022-01-31 19:46:58', '2022-01-31 19:45:08', '2022-01-31 19:46:58'),
+(13, 'App\\Models\\User', 5, 'Tok1', '9f854b835f65828e302c347895769c44d653ba038336949e2497282f32228843', '[\"*\"]', '2022-02-01 07:45:40', '2022-01-31 20:49:04', '2022-02-01 07:45:40'),
+(14, 'App\\Models\\User', 1, 'Test', 'bbff699b401233c65f828724e0ed31f2618d85f86525c4a5fd302e8833900502', '[\"*\"]', '2022-02-01 07:48:13', '2022-02-01 07:44:51', '2022-02-01 07:48:13');
 
 -- --------------------------------------------------------
 
@@ -570,7 +642,10 @@ INSERT INTO `products` (`id`, `image`, `status`, `price`, `images`, `category_id
 (16, '20220129024958.jpg', 1, '10', NULL, 48, '2022-01-28 22:49:58', '2022-01-28 22:49:58'),
 (17, '20220129025153.jpg', 1, '14', NULL, 48, '2022-01-28 22:51:53', '2022-01-28 22:51:53'),
 (18, '20220129170344.jpg', 1, '10', NULL, 49, '2022-01-29 13:03:44', '2022-01-29 13:03:44'),
-(19, '20220129170645.jpg', 1, '12', NULL, 49, '2022-01-29 13:06:45', '2022-01-29 13:06:45');
+(19, '20220129170645.jpg', 1, '12', NULL, 49, '2022-01-29 13:06:45', '2022-01-29 13:06:45'),
+(20, NULL, 0, '707', NULL, 49, '2022-01-31 19:44:12', '2022-01-31 19:44:12'),
+(21, NULL, 1, '2', NULL, 48, '2022-01-31 19:44:19', '2022-01-31 19:44:19'),
+(22, NULL, 1, '273', NULL, 50, '2022-01-31 19:44:32', '2022-01-31 19:44:32');
 
 -- --------------------------------------------------------
 
@@ -604,7 +679,16 @@ INSERT INTO `product_translations` (`id`, `product_id`, `locale`, `name`, `descr
 (54, 18, 'zh-CN', '奶油番茄汤', '番茄加奶油', '2022-01-29 13:03:44', '2022-01-29 13:03:44'),
 (55, 19, 'en', 'Mushroom Cream-Soup', 'Mushroom with cream sauce', '2022-01-29 13:06:45', '2022-01-29 13:06:45'),
 (56, 19, 'ka', 'სოკოს კრემ-წვნიანი', 'სოკო ნაღებით', '2022-01-29 13:06:45', '2022-01-29 13:06:45'),
-(57, 19, 'zh-CN', '奶油蘑菇汤', '蘑菇加奶油', '2022-01-29 13:06:45', '2022-01-29 13:06:45');
+(57, 19, 'zh-CN', '奶油蘑菇汤', '蘑菇加奶油', '2022-01-29 13:06:45', '2022-01-29 13:06:45'),
+(58, 20, 'en', 'Harper Mcintosh', 'Molestiae laboris ne', '2022-01-31 19:44:12', '2022-01-31 19:44:12'),
+(59, 20, 'ka', 'Nash Martinez', 'Quod est quod earum', '2022-01-31 19:44:12', '2022-01-31 19:44:12'),
+(60, 20, 'zh-CN', 'Eugenia Haney', 'Est illo quas eos e', '2022-01-31 19:44:12', '2022-01-31 19:44:12'),
+(61, 21, 'en', 'Merritt Dixon', 'Nam beatae enim vita', '2022-01-31 19:44:19', '2022-01-31 19:44:19'),
+(62, 21, 'ka', 'Clare Huber', 'Id nostrum omnis qui', '2022-01-31 19:44:19', '2022-01-31 19:44:19'),
+(63, 21, 'zh-CN', 'Kenneth Duke', 'Nostrum est dolor i', '2022-01-31 19:44:19', '2022-01-31 19:44:19'),
+(64, 22, 'en', 'Whoopi Nelson', 'Minim dolores ipsum', '2022-01-31 19:44:32', '2022-01-31 19:44:32'),
+(65, 22, 'ka', 'Griffith Wyatt', 'Atque dolores aliqua', '2022-01-31 19:44:32', '2022-01-31 19:44:32'),
+(66, 22, 'zh-CN', 'Maxwell Meadows', 'Iste rerum recusanda', '2022-01-31 19:44:32', '2022-01-31 19:44:32');
 
 -- --------------------------------------------------------
 
@@ -626,6 +710,14 @@ CREATE TABLE `reservations` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `reservations`
+--
+
+INSERT INTO `reservations` (`id`, `name`, `email`, `phone`, `date`, `time`, `person`, `table_id`, `status`, `created_at`, `updated_at`) VALUES
+(42, 'Ivory Bell', 'gudij@mailinator.com', '+1 (521) 205-8918', '1974-07-07', '02:05:00', 14, 54, 0, '2022-01-31 08:53:12', '2022-01-31 08:53:12'),
+(43, 'Kirestin Wynn', 'vylyp@mailinator.com', '+1 (322) 943-4511', '1996-11-28', '21:46:00', 4, 55, 0, '2022-01-31 22:02:02', '2022-01-31 22:02:02');
+
 -- --------------------------------------------------------
 
 --
@@ -646,7 +738,8 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
 (1, 'admin', 'web', '2021-12-26 04:11:31', '2021-12-26 04:11:31'),
-(2, 'Manager', 'web', '2022-01-12 08:06:40', '2022-01-12 08:06:40');
+(2, 'Manager', 'web', '2022-01-12 08:06:40', '2022-01-12 08:06:40'),
+(3, 'API_Users', 'web', '2022-01-31 07:59:23', '2022-01-31 07:59:23');
 
 -- --------------------------------------------------------
 
@@ -681,17 +774,20 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (15, 1),
 (16, 1),
 (17, 1),
+(17, 3),
 (18, 1),
 (19, 1),
 (20, 1),
 (21, 1),
 (21, 2),
+(21, 3),
 (22, 1),
 (22, 2),
 (23, 1),
 (23, 2),
 (24, 1),
 (24, 2),
+(24, 3),
 (25, 1),
 (25, 2),
 (26, 1),
@@ -699,17 +795,20 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (27, 1),
 (29, 1),
 (29, 2),
+(29, 3),
 (30, 1),
 (30, 2),
 (31, 1),
 (32, 1),
 (32, 2),
 (33, 1),
+(33, 3),
 (34, 1),
 (35, 1),
 (36, 1),
 (37, 1),
 (37, 2),
+(37, 3),
 (38, 1),
 (38, 2),
 (39, 1),
@@ -717,6 +816,7 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (40, 1),
 (41, 1),
 (41, 2),
+(41, 3),
 (42, 1),
 (42, 2),
 (43, 1),
@@ -724,11 +824,22 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (44, 1),
 (45, 1),
 (45, 2),
+(45, 3),
 (46, 1),
 (46, 2),
 (47, 1),
 (47, 2),
-(48, 1);
+(48, 1),
+(51, 1),
+(51, 3),
+(52, 1),
+(52, 3),
+(53, 1),
+(53, 3),
+(54, 1),
+(55, 1),
+(56, 1),
+(57, 1);
 
 -- --------------------------------------------------------
 
@@ -753,7 +864,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `phone`, `email`, `logo`, `image`, `start_time`, `end_time`, `created_at`, `updated_at`) VALUES
-(11, '(+995) 514 756688', 'info@kerdzebi.ge', '20220130135039.png', '20220130133538.jpg', '10:00:00', '12:00:00', '2022-01-21 07:02:44', '2022-01-30 09:50:39');
+(11, '(+995) 514 756688', 'info@kerdzebi.ge', '20220205150107.png', '20220205153023.png', '10:00:00', '12:00:00', '2022-01-21 07:02:44', '2022-02-05 11:30:23');
 
 -- --------------------------------------------------------
 
@@ -780,9 +891,9 @@ CREATE TABLE `setting_translations` (
 --
 
 INSERT INTO `setting_translations` (`id`, `setting_id`, `locale`, `name`, `title`, `description`, `address`, `start_time_text`, `end_time_text`, `created_at`, `updated_at`) VALUES
-(26, 11, 'en', 'Georgian&European Cuisine', 'bwp.kerdzebi.ge', 'Create your digital menu with us   Kerdzebi.ge®', 'Georgia, Batumi,    Zurab Gorgiladze str. #111', 'Monday', 'Saturday', '2022-01-21 07:02:44', '2022-01-30 14:03:48'),
-(27, 11, 'ka', 'ქართულ&ევროპული სამზარეულო', 'კერძები.ჯი', 'შექმენი შენი ციფრული მენი ჩვენთან   Kerdzebi.ge®', 'საქართველო, ბათუმი,     ზ.გორგილაძის ქ. #111', 'ორშაბათი', 'შაბათი', '2022-01-21 07:02:44', '2022-01-30 13:45:00'),
-(28, 11, 'zh-CN', '中餐', 'Kerdzebi.ge®', 'Создайте свое цифровое меню вместе с нами   Kerdzebi.ge®', '戈尔吉拉泽海峡 巴统，格鲁吉亚 #111', '星期', '/星期天', '2022-01-21 07:02:44', '2022-01-30 13:52:22');
+(26, 11, 'en', 'Georgian&European Cuisine', 'bwp.kerdzebi.ge', 'Create your digital menu with us   Kerdzebi.ge®', 'Georgia, Batum', 'Monday', 'Saturday', '2022-01-21 07:02:44', '2022-02-05 10:34:42'),
+(27, 11, 'ka', 'ქართულ&ევროპული სამზარეულო', 'კერძები.ჯი', 'შექმენი შენი ციფრული მენი ჩვენთან   Kerdzebi.ge®', 'საქართველო, ბათუმი', 'ორშაბათი', 'შაბათი', '2022-01-21 07:02:44', '2022-02-05 10:34:42'),
+(28, 11, 'zh-CN', '中餐', 'Kerdzebi.ge®', 'Создайте свое цифровое меню вместе с нами   Kerdzebi.ge®', '戈尔吉拉泽海峡 巴', '星期', '/星期天', '2022-01-21 07:02:44', '2022-02-05 10:34:42');
 
 -- --------------------------------------------------------
 
@@ -851,7 +962,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Davit Gakhokia', 'd.gakhokia@diem.ge', NULL, '$2y$10$kKLCoIQ1agyMND64EznmQO5WaTJLCRhAGCnYBXgJV/HnmEyf4YYIK', NULL, '2021-12-26 04:12:05', '2021-12-26 13:29:28'),
 (2, 'დავით გახოკია', 'admin@kerdzebi.ge', NULL, '$2y$10$KJgSrIpK.m1JEiI.MGWo8uTmHxt9sqmri51P1cwZDzuFg2iYANLp.', NULL, '2022-01-11 08:02:18', '2022-01-11 08:02:18'),
-(3, 'Demo', 'manager@kerdzebi.ge', NULL, '$2y$10$V2yXEOrVb8FUlmiqxNJ5Ou/fLh9RAs5rlAMLJr.p0PMXW8VSmhIGW', NULL, '2022-01-12 08:07:41', '2022-01-12 08:07:41');
+(3, 'Demo', 'manager@kerdzebi.ge', NULL, '$2y$10$V2yXEOrVb8FUlmiqxNJ5Ou/fLh9RAs5rlAMLJr.p0PMXW8VSmhIGW', NULL, '2022-01-12 08:07:41', '2022-01-12 08:07:41'),
+(4, 'მირიან კახიძე', 'mirka@kerdzebi.ge', NULL, '$2y$10$UbAyoNtroq28tQXKwRQtWeyW1719s3XVt5cTPqcvx1.HV6N7R4Y6C', NULL, '2022-01-30 16:01:07', '2022-01-30 16:01:07'),
+(5, 'API', 'api@kerdzebi.ge', NULL, '$2y$10$A083kTmc.sLZTp5iByxKGuMiqhCeIYhlUWCIx78TamXJTDp2PUqoO', NULL, '2022-01-31 08:00:07', '2022-01-31 20:47:49');
 
 --
 -- Indexes for dumped tables
@@ -945,6 +1058,12 @@ ALTER TABLE `networks`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pages`
 --
 ALTER TABLE `pages`
@@ -962,6 +1081,14 @@ ALTER TABLE `password_resets`
 ALTER TABLE `permissions`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `permissions_name_guard_name_unique` (`name`,`guard_name`);
+
+--
+-- Indexes for table `personal_access_tokens`
+--
+ALTER TABLE `personal_access_tokens`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
+  ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
 -- Indexes for table `places`
@@ -1067,13 +1194,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `category_translations`
 --
 ALTER TABLE `category_translations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=175;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
 
 --
 -- AUTO_INCREMENT for table `clients`
@@ -1109,25 +1236,31 @@ ALTER TABLE `languages`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `message_translations`
 --
 ALTER TABLE `message_translations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `networks`
 --
 ALTER TABLE `networks`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -1139,7 +1272,13 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+
+--
+-- AUTO_INCREMENT for table `personal_access_tokens`
+--
+ALTER TABLE `personal_access_tokens`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `places`
@@ -1169,25 +1308,25 @@ ALTER TABLE `post_translations`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `product_translations`
 --
 ALTER TABLE `product_translations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -1217,7 +1356,7 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
