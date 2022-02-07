@@ -41,7 +41,7 @@
             <div class="col-md-6 col-xl-3">
               <div class="card shadow-lg">
                 <div class="card-body">
-                  <img src="assets/img/icons/lineal/search-2.svg" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="">
+                  <img src="{{ asset('frontend/assets/img/icons/lineal/search-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="">
                   <h4>SEO Services</h4>
                   <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
                   <a href="#" class="more hover link-yellow">Learn More</a>
@@ -54,7 +54,7 @@
             <div class="col-md-6 col-xl-3">
               <div class="card shadow-lg">
                 <div class="card-body">
-                  <img src="assets/img/icons/lineal/browser.svg" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="">
+                  <img src="{{ asset('frontend/assets/img/icons/lineal/browser.svg') }}" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="">
                   <h4>Web Design</h4>
                   <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
                   <a href="#" class="more hover link-red">Learn More</a>
@@ -67,7 +67,7 @@
             <div class="col-md-6 col-xl-3">
               <div class="card shadow-lg">
                 <div class="card-body">
-                  <img src="assets/img/icons/lineal/chat-2.svg" class="svg-inject icon-svg icon-svg-md text-green mb-3" alt="">
+                  <img src="{{ asset('frontend/assets/img/icons/lineal/chat-2.svg') }}" class="svg-inject icon-svg icon-svg-md text-green mb-3" alt="">
                   <h4>Social Engagement</h4>
                   <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
                   <a href="#" class="more hover link-green">Learn More</a>
@@ -80,7 +80,7 @@
             <div class="col-md-6 col-xl-3">
               <div class="card shadow-lg">
                 <div class="card-body">
-                  <img src="assets/img/icons/lineal/megaphone.svg" class="svg-inject icon-svg icon-svg-md text-blue mb-3" alt="">
+                  <img src="{{ asset('frontend/assets/img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md text-blue mb-3" alt="">
                   <h4>Content Marketing</h4>
                   <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
                   <a href="#" class="more hover link-blue">Learn More</a>
@@ -102,7 +102,7 @@
       <div class="container py-16 py-md-18">
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-8 align-items-center">
           <div class="col-lg-7 order-lg-2">
-            <figure><img class="w-auto" src="assets/img/illustrations/i3.png" srcset="assets/img/illustrations/i3@2x.png 2x" alt=""></figure>
+            <figure><img class="w-auto" src="{{ asset('frontend/assets/img/illustrations/i3.png') }}" srcset="{{ asset('frontend/assets/img/illustrations/i3@2x.png 2x') }}" alt=""></figure>
           </div>
           <!--/column -->
           <div class="col-lg-5">
@@ -193,7 +193,7 @@
         <!--/.row -->
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-lg-22 mb-xl-24 align-items-center">
           <div class="col-lg-7">
-            <figure><img class="w-auto" src="assets/img/illustrations/i6.png" srcset="assets/img/illustrations/i6@2x.png 2x" alt=""></figure>
+            <figure><img class="w-auto" src="{{ asset('frontend/assets/img/illustrations/i6.png') }}" srcset="{{ asset('frontend/assets/img/illustrations/i6@2x.png 2x') }}" alt=""></figure>
           </div>
           <!--/column -->
           <div class="col-lg-5">
@@ -270,7 +270,7 @@
               <div class="col-md-6 col-xl-3">
                 <div class="card shadow-lg">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te1.jpg" srcset="assets/img/avatars/te1@2x.jpg 2x" alt="">
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('frontend/assets/img/avatars/te1.jpg') }}{{ asset('frontend/" srcset="assets/img/avatars/te') }}1@2x.jpg 2x" alt="">
                     <h4 class="mb-1">Coriss Ambady</h4>
                     <div class="meta mb-2">Financial Analyst</div>
                     <p class="mb-2">Fermentum massa justo sit amet risus morbi leo.</p>
@@ -289,7 +289,7 @@
               <div class="col-md-6 col-xl-3">
                 <div class="card shadow-lg">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te2.jpg" srcset="assets/img/avatars/te2@2x.jpg 2x" alt="">
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('frontend/assets/img/avatars/te2.jpg') }}{{ asset('frontend/" srcset="assets/img/avatars/te') }}2@2x.jpg 2x" alt="">
                     <h4 class="mb-1">Cory Zamora</h4>
                     <div class="meta mb-2">Marketing Specialist</div>
                     <p class="mb-2">Fermentum massa justo sit amet risus morbi leo.</p>
@@ -308,7 +308,7 @@
               <div class="col-md-6 col-xl-3">
                 <div class="card shadow-lg">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te3.jpg" srcset="assets/img/avatars/te3@2x.jpg 2x" alt="">
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('frontend/assets/img/avatars/te3.jpg') }}{{ asset('frontend/" srcset="assets/img/avatars/te') }}3@2x.jpg 2x" alt="">
                     <h4 class="mb-1">Nikolas Brooten</h4>
                     <div class="meta mb-2">Sales Manager</div>
                     <p class="mb-2">Fermentum massa justo sit amet risus morbi leo.</p>
@@ -327,7 +327,7 @@
               <div class="col-md-6 col-xl-3">
                 <div class="card shadow-lg">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te4.jpg" srcset="assets/img/avatars/te4@2x.jpg 2x" alt="">
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('frontend/assets/img/avatars/te4.jpg') }}{{ asset('frontend/" srcset="assets/img/avatars/te') }}4@2x.jpg 2x" alt="">
                     <h4 class="mb-1">Jackie Sanders</h4>
                     <div class="meta mb-2">Investment Planner</div>
                     <p class="mb-2">Fermentum massa justo sit amet risus morbi leo.</p>
@@ -357,7 +357,7 @@
       <div class="container">
         <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
           <div class="col-lg-7 order-lg-2">
-            <figure><img class="w-auto" src="assets/img/illustrations/i8.png" srcset="assets/img/illustrations/i8@2x.png 2x" alt=""></figure>
+            <figure><img class="w-auto" src="{{ asset('frontend/assets/img/illustrations/i8.png') }}" srcset="{{ asset('frontend/assets/img/illustrations/i8@2x.png 2x') }}" alt=""></figure>
           </div>
           <!--/column -->
           <div class="col-lg-5">
@@ -559,7 +559,7 @@
         <!--/.row -->
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-10 mb-md-14 align-items-center">
           <div class="col-lg-7">
-            <figure><img class="w-auto" src="assets/img/illustrations/i5.png" srcset="assets/img/illustrations/i5@2x.png 2x" alt=""></figure>
+            <figure><img class="w-auto" src="{{ asset('frontend/assets/img/illustrations/i5.png') }}" srcset="{{ asset('frontend/assets/img/illustrations/i5@2x.png 2x') }}" alt=""></figure>
           </div>
           <!--/column -->
           <div class="col-lg-5">
@@ -574,27 +574,27 @@
         <div class="px-lg-5">
           <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
             <div class="col-4 col-md-2">
-              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="assets/img/brands/c1.png" alt=""></figure>
+              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('frontend/assets/img/brands/c1.png') }}" alt=""></figure>
             </div>
             <!--/column -->
             <div class="col-4 col-md-2">
-              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="assets/img/brands/c2.png" alt=""></figure>
+              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('frontend/assets/img/brands/c2.png') }}" alt=""></figure>
             </div>
             <!--/column -->
             <div class="col-4 col-md-2">
-              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="assets/img/brands/c3.png" alt=""></figure>
+              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('frontend/assets/img/brands/c3.png') }}" alt=""></figure>
             </div>
             <!--/column -->
             <div class="col-4 col-md-2">
-              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="assets/img/brands/c4.png" alt=""></figure>
+              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('frontend/assets/img/brands/c4.png') }}" alt=""></figure>
             </div>
             <!--/column -->
             <div class="col-4 col-md-2">
-              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="assets/img/brands/c5.png" alt=""></figure>
+              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('frontend/assets/img/brands/c5.png') }}" alt=""></figure>
             </div>
             <!--/column -->
             <div class="col-4 col-md-2">
-              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="assets/img/brands/c6.png" alt=""></figure>
+              <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ asset('frontend/assets/img/brands/c6.png') }}" alt=""></figure>
             </div>
             <!--/column -->
           </div>
