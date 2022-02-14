@@ -27,25 +27,25 @@ use App\Http\Controllers\Backend\OrderController;
 
 // Start Frontend Routes
 
-    //Home Page
-    Route::get('/', [HomeController::class, 'index'])->name('/');
+//Home Page
+Route::get('/', [HomeController::class, 'index'])->name('/');
 
-    //Main Menu By Category
-    Route::get('menu', [HomeController::class, 'menu'])->name('menu');
+//Main Menu By Category
+Route::get('menu', [HomeController::class, 'menu'])->name('menu');
 
-    //Product by Category
-    Route::get('/category/{id}', [HomeController::class, 'category']);
+//Product by Category
+Route::get('/category/{id}', [HomeController::class, 'category']);
 
-    // Reservation
-    Route::get('reservation', [HomeController::class, 'reservation']);
+// Reservation
+Route::get('reservation', [HomeController::class, 'reservation']);
 
 
-    // Orders
-    Route::get('orders', [HomeController::class, 'orders'])->name('orders');
-    Route::post('order', [HomeController::class, 'create'])->name('order.create');
-    Route::post('/order/updateQuantity', [HomeController::class, 'updateQuantity'])->name('updateQuantity');
-    Route::get('/order/destroy/{id}', [HomeController::class, 'destroy'])->name('destroy');
-    // Route::get('/order/clearCart', [HomeController::class, 'clearCart'])->name('clearCart');
+// Orders
+Route::get('orders', [HomeController::class, 'orders'])->name('orders');
+Route::post('order', [HomeController::class, 'create'])->name('order.create');
+Route::post('/order/updateQuantity', [HomeController::class, 'updateQuantity'])->name('updateQuantity');
+Route::get('/order/destroy/{id}', [HomeController::class, 'destroy'])->name('destroy');
+// Route::get('/order/clearCart', [HomeController::class, 'clearCart'])->name('clearCart');
 
 // End Front Routes
 
@@ -55,6 +55,7 @@ use App\Http\Controllers\Backend\OrderController;
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
@@ -114,9 +115,4 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
 
     Route::resource('test', TestController::class);
-
-
-
-
-
 });

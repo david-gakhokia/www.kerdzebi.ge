@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Reservation;
 use App\Models\Setting;
 use App\Models\Table;
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -22,6 +23,11 @@ class HomeController extends Controller
             ->first();
 
         return view('frontend.index', ['setting' => $setting]);
+    }
+
+    public function contact()
+    {
+        return view('frontend.contact');
     }
 
 
