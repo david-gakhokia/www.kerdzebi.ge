@@ -300,8 +300,10 @@ figure {
 }
 
 img, svg {
-    vertical-align: middle
+    vertical-align: middle;
+    /* margin-left: -17px; */
 }
+
 
 table {
     caption-side: bottom;
@@ -43679,3 +43681,4 @@ footer.bg-dark.angled.lower-start:after, footer.bg-dark.angled.upper-start:befor
     text-overflow: ellipsis;
     white-space: nowrap
 }
+

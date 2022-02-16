@@ -13,15 +13,15 @@
           </div>
           <div class="navbar-collapse offcanvas-nav">
             <div class="offcanvas-header d-lg-none d-xl-none">
-              <a href="index.html"><img src="assets/img/logo-light.png" srcset="assets/img/logo-light@2x.png 2x" alt=""></a>
+              <a href="{{ route('/') }}"><img src="{{ asset('uploads/settings/'.$setting->image) }}" srcset="{{ asset('uploads/settings/'.$setting->image) }} 2x" alt=""></a>
               <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
             </div>
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link toggle" href="{{ route('home') }}">@lang('Home')</a></li>
                 <li class="nav-item"><a class="nav-link toggle" href="{{ route('home') }}">@lang('About Us')</a></li>
-                <li class="nav-item"><a class="nav-link toggle" href="{{ route('home') }}">@lang('Prices')</a></li>
+                <li class="nav-item"><a class="nav-link toggle" href="{{ route('prices') }}">@lang('Prices')</a></li>
                 <li class="nav-item"><a class="nav-link toggle" href="{{ route('home') }}">@lang('News')</a></li>
-                <li class="nav-item"><a class="nav-link toggle" href="{{ route('home') }}">@lang('Contact')</a></li>
+                <li class="nav-item"><a class="nav-link toggle" href="{{ route('contact') }}">@lang('Contact')</a></li>
             </ul>
             <!-- /.navbar-nav -->
           </div>

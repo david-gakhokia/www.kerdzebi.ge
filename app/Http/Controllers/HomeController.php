@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Client;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Reservation;
@@ -30,6 +31,22 @@ class HomeController extends Controller
         return view('frontend.contact');
     }
 
+    public function prices()
+    {
+        return view('frontend.prices');
+    }
+
+    public function prices_show()
+    {
+        return view('frontend.prices.show');
+    }
+
+
+    public function about()
+    {
+        $clients = Client::all();
+        return view('frontend.about',compact('clients'));
+    }
 
     public function menu()
     {

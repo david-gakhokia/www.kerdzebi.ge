@@ -11,7 +11,7 @@
     <link rel="preload" href="{{ asset('frontend/assets/css/fonts/thicccboi.css') }}" as="style" onload="this.rel='stylesheet'">
 
 <style>
-    h1,h2,h3,h4,h5,h6,p ,li, a, span {
+    h1,h2,h3,h4,h5,h6,p ,li, a, span , td ,tr {
         /* font-family: "BPG Glaho Traditional", sans-serif !important; */
         font-family: "BPG Mrgvlovani", sans-serif !important;
     }

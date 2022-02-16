@@ -55,7 +55,12 @@ Route::get('/order/destroy/{id}', [HomeController::class, 'destroy'])->name('des
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('prices', [HomeController::class, 'prices'])->name('prices');
+Route::get('prices/show', [HomeController::class, 'prices_show'])->name('prices.show');
+
+
 
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
