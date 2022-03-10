@@ -58,6 +58,14 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('prices', [HomeController::class, 'prices'])->name('prices');
+
+Route::get('blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('blog/show', [HomeController::class, 'blog_show']);
+
+Route::get('products', [HomeController::class, 'products'])->name('products');
+Route::get('product/{id}', [HomeController::class, 'product_show']);
+
+
 Route::get('prices/show', [HomeController::class, 'prices_show'])->name('prices.show');
 
 

@@ -42,5 +42,10 @@ class ViewServiceProvider extends ServiceProvider
                 ->first();
             $view->with('setting', $setting);
         });
+
+        view()->composer(['*'], function ($view) {
+            $networks = Network::all();
+            $view->with('networks', $networks);
+        });
     }
 }

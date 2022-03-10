@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Client;
 use App\Models\Order;
+use App\Models\Post;
 use App\Models\Product;
 use App\Models\Reservation;
 use App\Models\Setting;
@@ -26,9 +27,35 @@ class HomeController extends Controller
         return view('frontend.index', ['setting' => $setting]);
     }
 
+
     public function contact()
     {
         return view('frontend.contact');
+    }
+
+
+    public function blog()
+    {
+        return view('frontend.posts.index');
+    }
+
+    public function blog_show()
+    {
+        return view('frontend.posts.show');
+    }
+
+    public function products()
+    {
+        $products = Product::all();
+        return view('frontend.products.index',compact('products'));
+    }
+    public function product_show($id)
+    {
+        $product = Product::translatedIn(app()->getLocale())
+            ->findOrFail($id);
+        $categories = Category::all();
+
+        return view('frontend.products.show', compact(['product', 'categories']));
     }
 
     public function prices()
@@ -47,6 +74,10 @@ class HomeController extends Controller
         $clients = Client::all();
         return view('frontend.about',compact('clients'));
     }
+
+
+
+
 
     public function menu()
     {

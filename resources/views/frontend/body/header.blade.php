@@ -17,10 +17,11 @@
               <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
             </div>
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link toggle" href="{{ route('home') }}">@lang('Home')</a></li>
-                <li class="nav-item"><a class="nav-link toggle" href="{{ route('home') }}">@lang('About Us')</a></li>
+                <li class="nav-item"><a class="nav-link toggle" href="{{ route('/') }}">@lang('Home')</a></li>
+                <li class="nav-item"><a class="nav-link toggle" href="{{ route('about') }}">@lang('About Us')</a></li>
                 <li class="nav-item"><a class="nav-link toggle" href="{{ route('prices') }}">@lang('Prices')</a></li>
-                <li class="nav-item"><a class="nav-link toggle" href="{{ route('home') }}">@lang('News')</a></li>
+                <li class="nav-item"><a class="nav-link toggle" href="{{ route('products') }}">@lang('Products')</a></li>
+                <li class="nav-item"><a class="nav-link toggle" href="{{ route('blog') }}">@lang('News')</a></li>
                 <li class="nav-item"><a class="nav-link toggle" href="{{ route('contact') }}">@lang('Contact')</a></li>
             </ul>
             <!-- /.navbar-nav -->
@@ -29,11 +30,22 @@
           <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
               <li class="nav-item dropdown language-select text-uppercase">
-                <a class="nav-link dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En</a>
+                <a class="nav-link dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{app()->getLocale() }}</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="dropdown-item" href="?language=en">En</a></li>
-                  <li class="nav-item"><a class="dropdown-item" href="?language=ka">Ka</a></li>
-                  <li class="nav-item"><a class="dropdown-item" href="?language=ru">Ru</a></li>
+                    @if (app()->getLocale() == 'en')
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="?language=ka">
+                                <img src="https://img.icons8.com/emoji/32/000000/georgia-emoji.png" alt="KA">
+                            </a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="?language=en">
+                                <img src="https://img.icons8.com/emoji/32/000000/united-kingdom-emoji.png" alt="EN">
+                            </a>
+                        </li>
+                    @endif
+
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" data-toggle="offcanvas-info"><i class="uil uil-info-circle"></i></a></li>
@@ -46,35 +58,32 @@
           <!-- /.navbar-other -->
           <div class="offcanvas-info text-inverse">
             <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-info-close" aria-label="Close"></button>
-            <a href="index.html"><img src="assets/img/logo-light.png" srcset="assets/img/logo-light@2x.png 2x" alt=""></a>
-            <div class="mt-4 widget">
-              <p>Sandbox is a multipurpose HTML5 template with various layouts which will be a great solution for your business.</p>
+
+            <!-- /.widget -->
+            <div class="widget">
+              <h4 class="widget-title text-white mb-3">@lang('Contact Info')</h4>
+              <p>{{ $setting->address }}</p>
+              <a href="mailto:{{ $setting->email }}"><p>{{ $setting->email }}</p></a>
+              <a href="tel:{{ $setting->phone }}"><p>{{ $setting->phone }}</p></a>
+
             </div>
             <!-- /.widget -->
             <div class="widget">
-              <h4 class="widget-title text-white mb-3">Contact Info</h4>
-              <address> Moonshine St. 14/05 <br> Light City, London </address>
-              <a href="cdn-cgi/l/email-protection.html#88eee1fafbfca6e4e9fbfcc8ede5e9e1e4a6ebe7e5"><span class="__cf_email__" data-cfemail="442d2a222b042129252d286a272b29">[email&#160;protected]</span></a><br> +00 (123) 456 78 90
-            </div>
-            <!-- /.widget -->
-            <div class="widget">
-              <h4 class="widget-title text-white mb-3">Learn More</h4>
+              <h4 class="widget-title text-white mb-3">@lang('Site Map')</h4>
               <ul class="list-unstyled">
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="{{ route('about') }}">@lang('About Us')</a></li>
+                <li><a href="{{ route('/') }}">@lang('Terms of Use')</a></li>
+                <li><a href="{{ route('/') }}">@lang('Privacy Policy')</a></li>
+                <li><a href="{{route('contact')}}">@lang('Contact')</a></li>
               </ul>
             </div>
             <!-- /.widget -->
             <div class="widget">
-              <h4 class="widget-title text-white mb-3">Follow Us</h4>
+              <h4 class="widget-title text-white mb-3">@lang('Follow Us')</h4>
               <nav class="nav social social-white">
-                <a href="#"><i class="uil uil-twitter"></i></a>
-                <a href="#"><i class="uil uil-facebook-f"></i></a>
-                <a href="#"><i class="uil uil-dribbble"></i></a>
-                <a href="#"><i class="uil uil-instagram"></i></a>
-                <a href="#"><i class="uil uil-youtube"></i></a>
+                  @foreach ($networks as $network )
+                    <a href="{{ $network->link }}"><i class="uil uil-{{ $network->icon }}"></i></a>
+                  @endforeach
               </nav>
               <!-- /.social -->
             </div>
